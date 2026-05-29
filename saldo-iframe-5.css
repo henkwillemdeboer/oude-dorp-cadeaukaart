@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Override mijnmaks html/body background */
+html {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  filter: none !important;
+}
+
+html, body, body.main {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #113749;
+}
+
+table.saldotable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+table.saldotable td {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+td.tekst {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  color: #113749;
+  padding-bottom: 20px !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+td[colspan="2"] {
+  text-align: center !important;
+  padding: 0 0 16px 0 !important;
+  font-size: 18px;
+  color: #8aafbf;
+}
+
+input.input {
+  background: #ffffff;
+  border: 1.5px solid #D6E4ED;
+  border-radius: 10px;
+  padding: 11px 10px;
+  font-size: 15px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #113749;
+  outline: none;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: border-color 0.2s;
+}
+
+input.input:focus {
+  border-color: #113749;
+}
+
+input[name="prefix"] {
+  width: 90px !important;
+  color: #8aafbf !important;
+  background: #f0f6fa !important;
+  cursor: default;
+}
+
+input[name="cardno"] {
+  width: 108px !important;
+}
+
+input[name="code"] {
+  width: 72px !important;
+}
+
+tr:last-child td:first-child {
+  display: none;
+}
+
+tr:last-child td:last-child {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  padding-top: 4px;
+}
+
+input.button,
+input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  background: #113749 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 13px 0;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', Arial, sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+input.button:hover,
+input[type="submit"]:hover {
+  background: #1a4f68 !important;
+}
+
+/* Resultaatteksten */
+#Saldo {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #2a8a5e !important;
+  text-align: center !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+
+.error, p.error {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #c0392b !important;
+  text-align: center !important;
+}
