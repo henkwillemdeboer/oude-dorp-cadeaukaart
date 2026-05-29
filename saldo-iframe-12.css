@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, body.main {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  filter: none !important;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #113749;
+  height: auto !important;
+}
+
+/* ── Form als flex column gecentreerd ── */
+form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 28px 24px 28px !important;
+}
+
+/* ── Tabel ── */
+table.saldotable {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+table.saldotable td {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* ── "Kaartnummer:" label ── */
+td.tekst {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #113749 !important;
+  padding: 0 0 20px 0 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  line-height: 1.4 !important;
+}
+
+/* ── Inputrij ── */
+td[colspan="2"] {
+  text-align: center !important;
+  padding: 0 0 20px 0 !important;
+  font-size: 18px !important;
+  color: #8aafbf !important;
+}
+
+/* ── Rij met inputs extra ruimte boven ── */
+tr:nth-child(2) td {
+  padding-top: 24px !important;
+}
+
+/* ── Inputvelden ── */
+input.input {
+  background: #ffffff !important;
+  border: 1.5px solid #D6E4ED !important;
+  border-radius: 10px !important;
+  padding: 10px 8px !important;
+  height: 44px !important;
+  font-size: 15px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  color: #113749 !important;
+  outline: none !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+}
+
+input.input:focus {
+  border-color: #113749 !important;
+}
+
+input[name="prefix"] {
+  width: 90px !important;
+  color: #8aafbf !important;
+  background: #f0f6fa !important;
+  cursor: default !important;
+}
+
+input[name="cardno"] { width: 108px !important; }
+input[name="code"]   { width: 72px !important; }
+
+/* ── Knop-rij: lege td verbergen, knop-td centreren ── */
+tr:last-child td:first-child { display: none !important; }
+
+tr:last-child td:last-child {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 20px 0 0 0 !important;
+}
+
+/* ── Submit knop ── */
+input.button, input[type="submit"] {
+  display: inline-block !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  background-color: #113749 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 13px 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  cursor: pointer !important;
+  text-align: center !important;
+}
+
+/* ── Foutmelding ── */
+span#Message {
+  display: block !important;
+  color: #c0392b !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 14px 24px !important;
+  width: 100% !important;
+  max-width: 280px !important;
+}
+
+/* ── Saldo resultaat ── */
+#Saldo {
+  display: block !important;
+  color: #2a8a5e !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 14px 24px !important;
+  width: 100% !important;
+  max-width: 280px !important;
+}
