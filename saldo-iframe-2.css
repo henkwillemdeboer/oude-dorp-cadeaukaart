@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #113749;
+}
+
+/* ── Invoerformulier ── */
+
+table.saldotable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+table.saldotable td {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+td.tekst {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  color: #113749;
+  padding-bottom: 20px !important;
+}
+
+td[colspan="2"] {
+  text-align: center !important;
+  padding: 0 0 16px 0 !important;
+  font-size: 18px;
+  color: #8aafbf;
+}
+
+input.input {
+  background: #ffffff;
+  border: 1.5px solid #D6E4ED;
+  border-radius: 10px;
+  padding: 11px 10px;
+  font-size: 15px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #113749;
+  outline: none;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: border-color 0.2s;
+}
+
+input.input:focus {
+  border-color: #113749;
+}
+
+input[name="prefix"] {
+  width: 90px !important;
+  color: #8aafbf !important;
+  background: #f0f6fa !important;
+  cursor: default;
+}
+
+input[name="cardno"] {
+  width: 108px !important;
+}
+
+input[name="code"] {
+  width: 72px !important;
+}
+
+tr:last-child td:first-child {
+  display: none;
+}
+
+tr:last-child td:last-child {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  padding-top: 4px;
+}
+
+/* Alle knoppen (invoerformulier én resultaatpagina) */
+input[type="submit"],
+input[type="button"],
+button,
+a.button,
+.button {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  background: #113749 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 13px 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none !important;
+  text-align: center !important;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+a.button:hover {
+  background: #1a4f68 !important;
+}
+
+/* ── Resultaatpagina ── */
+
+/* Achtergrond wit maken zodat het in de blauwe wrapper past */
+body.main {
+  background: transparent !important;
+}
+
+/* "Uw saldo: € 1.00" tekst */
+.saldo,
+p.saldo,
+div.saldo,
+[class*="saldo"]:not(table):not(input) {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #2a8a5e !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+
+/* Foutmelding */
+.error,
+[class*="error"],
+[class*="inactief"] {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #c0392b !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+/* Resultaat-wrapper centreren */
+body > form,
+body > div,
+body > table {
+  text-align: center;
+  width: 100%;
+}
