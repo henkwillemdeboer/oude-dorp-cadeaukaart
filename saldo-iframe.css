@@ -10,6 +10,8 @@ html, body {
   color: #113749;
 }
 
+/* ── Invoerformulier ── */
+
 table.saldotable {
   border-collapse: collapse;
   border-spacing: 0;
@@ -23,7 +25,6 @@ table.saldotable td {
   background: transparent;
 }
 
-/* "Kaartnummer:" — center uitgelijnd */
 td.tekst {
   text-align: center !important;
   display: block;
@@ -74,7 +75,6 @@ input[name="code"] {
   width: 72px !important;
 }
 
-/* Lege eerste td verbergen, knop-td centreren */
 tr:last-child td:first-child {
   display: none;
 }
@@ -86,37 +86,71 @@ tr:last-child td:last-child {
   padding-top: 4px;
 }
 
-input.button {
+/* Alle knoppen (invoerformulier én resultaatpagina) */
+input[type="submit"],
+input[type="button"],
+button,
+a.button,
+.button {
   display: inline-block;
   width: 100%;
   max-width: 320px;
-  background: #113749;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  padding: 13px 0;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: 'DM Sans', Arial, sans-serif;
+  background: #113749 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 13px 0 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none !important;
+  text-align: center !important;
 }
 
-input.button:hover {
-  background: #1a4f68;
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+a.button:hover {
+  background: #1a4f68 !important;
 }
 
-/* Resultaat na submit */
-.saldo, .result, .melding, p.saldo {
-  margin-top: 16px;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 16px 24px;
+/* ── Resultaatpagina ── */
+
+/* Achtergrond wit maken zodat het in de blauwe wrapper past */
+body.main {
+  background: transparent !important;
+}
+
+/* "Uw saldo: € 1.00" tekst */
+.saldo,
+p.saldo,
+div.saldo,
+[class*="saldo"]:not(table):not(input) {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #2a8a5e !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+
+/* Foutmelding */
+.error,
+[class*="error"],
+[class*="inactief"] {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #c0392b !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+/* Resultaat-wrapper centreren */
+body > form,
+body > div,
+body > table {
   text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'DM Sans', Arial, sans-serif;
+  width: 100%;
 }
-
-.ok, [class*="ok"]   { color: #2a8a5e; }
-.error, [class*="error"], [class*="inactief"] { color: #c0392b; }
